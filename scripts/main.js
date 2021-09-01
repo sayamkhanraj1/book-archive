@@ -21,14 +21,14 @@ const displaySearchResult = books =>{
     searchResult.textContent = '';
     // dispaly total books number
     const totalNum = document.getElementById('total-num');
+    totalNum.textContent = '';
     const h3 = document.createElement('h3');
     h3.classList.add('total-number')
     h3.innerText = `
     Total number of result found : ${books.numFound}
     `
     totalNum.appendChild(h3)
-    if(books.length === 0){
-        // error messgae
+    if(books.length === 0 ){
     }
     books.docs.forEach(book => {
         console.log(book)
